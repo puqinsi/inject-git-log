@@ -1,9 +1,9 @@
 /*
- * @Description: feat: 自动注入 git log
+ * @Description: test
  * @Author: zhaoce
  * @Developer: zhaoce
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-07 00:08:13
+ * @LastEditTime: 2023-01-07 00:09:50
  */
 
 /* 自动注入 git 信息 */
@@ -75,7 +75,7 @@ function processFiles(files) {
     try {
       processFile(file);
     } catch (err) {
-      // console.log(err);
+      console.log(err);
     }
   });
 }
