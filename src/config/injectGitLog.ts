@@ -1,9 +1,9 @@
 /*
- * @Description: test
+ * @Description: 增加 ts 版
  * @Author: zhaoce
  * @Developer: zhaoce
  * @Date: 2023-01-07 01:23:43
- * @LastEditTime: 2023-01-07 01:50:59
+ * @LastEditTime: 2023-01-07 01:56:51
  */
 
 /* 自动注入 git 信息 */
