@@ -3,7 +3,7 @@
  * @Author: zhaoce
  * @Developer: zhaoce
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-07 00:09:50
+ * @LastEditTime: 2023-01-07 00:12:22
  */
 
 /* 自动注入 git 信息 */
@@ -74,8 +74,8 @@ function processFiles(files) {
   files.forEach(file => {
     try {
       processFile(file);
-    } catch (err) {
-      console.log(err);
+    } catch ({ code, path }) {
+      if (path) console.log(`读取 ${file} 文件失败`);
     }
   });
 }
