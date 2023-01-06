@@ -1,9 +1,9 @@
 /*
- * @Description: feat: injectGitLog TS
+ * @Description: test
  * @Author: zhaoce
  * @Developer: zhaoce
- * @Date: 2023-01-07 01:23:46
- * @LastEditTime: 2023-01-07 01:23:46
+ * @Date: 2023-01-07 01:23:43
+ * @LastEditTime: 2023-01-07 01:50:59
  */
 
 /* 自动注入 git 信息 */
