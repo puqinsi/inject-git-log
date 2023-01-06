@@ -1,7 +1,21 @@
+/*
+ * @Description: 配置 husky
+ * @Author: zhaoce
+ * @Developer: zhaoce
+ * @Date: 2023-01-07 00:05:35
+ * @LastEditTime: 2023-01-07 00:05:35
+ */
+
 /* 自动注入 git 信息 */
-const dayjs = require("dayjs");
-const fs = require("fs");
-const { execSync } = require("child_process");
+
+// const dayjs = require("dayjs");
+// const fs = require("fs");
+// const { execSync } = require("child_process");
+import dayjs from "dayjs";
+import * as fs from "fs";
+import ChildProcess from "child_process";
+
+const { execSync } = ChildProcess;
 const gitMsgList = [
   "Description",
   "Author",
@@ -23,7 +37,7 @@ const delimiterArr = [
 ];
 const msgFilePath = process.argv[2];
 
-function injectGitMsg() {
+function injectGitLog() {
   // merge 操作触发的 commit 不做处理，只处理普通的 commit
   if (msgFilePath === ".git/MERGE_MSG") return;
 
@@ -166,4 +180,4 @@ function getGitMessage(file) {
   };
 }
 
-injectGitMsg();
+injectGitLog();

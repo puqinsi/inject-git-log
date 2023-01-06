@@ -11,6 +11,7 @@
     "injectGitLog": "node src/config/injectGitLog.js"
   },
   "dependencies": {
+    "dayjs": "^1.11.7",
     "vue": "^3.2.45"
   },
   "devDependencies": {
