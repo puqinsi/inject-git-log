@@ -1,9 +1,9 @@
 /*
- * @Description: test
+ * @Description: feat: 自动注入 git log
  * @Author: zhaoce
  * @Developer: zhaoce
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-07 00:07:20
+ * @LastEditTime: 2023-01-07 00:08:13
  */
 
 /* 自动注入 git 信息 */
