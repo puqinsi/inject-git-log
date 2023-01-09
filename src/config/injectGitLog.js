@@ -1,9 +1,9 @@
 /*
- * @Description: 优化
+ * @Description: chore: 修改 git 命令
  * @Author: zhaoce
- * @Developer: zhaoce
+ * @Developer: ZhaoCe
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-07 00:13:10
+ * @LastEditTime: 2023-01-09 11:29:49
  */
 
 /* 自动注入 git 信息 */
@@ -53,7 +53,7 @@ function injectGitLog() {
 }
 
 function getTargetFiles() {
-  const filesStr = execSync("git diff --cached --stat --name-only", {
+  const filesStr = execSync("git diff --cached --name-only", {
     encoding: "utf-8"
   }).trim();
   const files = filesStr.split("\n");
