@@ -1,9 +1,9 @@
 /*
- * @Description: fix: 增加 ts 文件
+ * @Description: chore: 优化
  * @Author: zhaoce
  * @Developer: ZhaoCe
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-10 09:55:10
+ * @LastEditTime: 2023-01-10 10:11:44
  */
 
 /* 自动注入 git 信息 */
@@ -12,6 +12,8 @@ import * as fs from "fs";
 import ChildProcess from "child_process";
 
 const { execSync } = ChildProcess;
+const { argv, exit } = process;
+const msgFilePath = argv[2];
 const gitMsgList = [
   "Description",
   "Author",
@@ -31,7 +33,6 @@ const delimiterArr = [
     type: "vue"
   }
 ];
-const msgFilePath = process.argv[2];
 
 function injectGitLog() {
   // merge 操作触发的 commit 不做处理，只处理普通的 commit
@@ -46,7 +47,7 @@ function injectGitLog() {
     // 重新提交（注入 git msg 的代码）
     reCommit();
     // 中断 commit-msg 钩子，取消之前的提交
-    process.exit(1);
+    exit(1);
   } else {
     console.log("没有需要处理的文件");
   }
