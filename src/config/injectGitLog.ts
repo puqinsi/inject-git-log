@@ -1,9 +1,9 @@
 /*
- * @Description: chore: 修改 git 命令
+ * @Description: fix: 增加 ts 文件
  * @Author: zhaoce
  * @Developer: ZhaoCe
  * @Date: 2023-01-07 01:23:43
- * @LastEditTime: 2023-01-09 11:29:49
+ * @LastEditTime: 2023-01-10 09:55:10
  */
 
 /* 自动注入 git 信息 */
@@ -68,7 +68,7 @@ function getTargetFiles(): string[] {
   const files = filesStr.split("\n");
   console.log("改动的文件有：", files);
   debugger;
-  // 改动文件包含 js 或 vue 文件时，注入 git msg 并重新提交
+  // 改动文件包含 js、ts、vue 文件时，注入 git msg 并重新提交
   const reg = /^((?!(\(|\)|<|>))\S)*?(\.js|\.ts|\.vue)$/;
   return files.filter(file => reg.test(file));
 }
