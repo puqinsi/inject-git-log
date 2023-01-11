@@ -1,9 +1,9 @@
 /*
- * @Description: chore: 优化
+ * @Description: chore: 字符串查找方法修改
  * @Author: zhaoce
  * @Developer: ZhaoCe
  * @Date: 2023-01-07 00:05:35
- * @LastEditTime: 2023-01-10 10:11:44
+ * @LastEditTime: 2023-01-11 14:53:12
  */
 
 /* 自动注入 git 信息 */
@@ -99,7 +99,7 @@ function processFileContent(file, content) {
   if (content.startsWith(delimiter.open)) {
     const { annotate, mainContent } = splitFileContent(content, delimiter);
     // 注释是 git 记录
-    if (annotate.indexOf(`@${gitMsgList[0]}`) !== -1) content = mainContent;
+    if (annotate.includes(`@${gitMsgList[0]}`)) content = mainContent;
   }
 
   const annotate = processAnnotate(file, delimiter);
