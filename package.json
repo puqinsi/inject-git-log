@@ -8,7 +8,7 @@
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
     "prepare": "husky install",
-    "injectGitLog": "node --loader ts-node/esm src/config/injectGitLog.ts"
+    "injectGitLog": "esno src/config/injectGitLog.ts"
   },
   "dependencies": {
     "dayjs": "^1.11.7",
@@ -17,6 +17,7 @@
   "devDependencies": {
     "@types/node": "^18.11.18",
     "@vitejs/plugin-vue": "^4.0.0",
+    "esno": "^0.16.3",
     "husky": "^8.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^4.9.3",
