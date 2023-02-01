@@ -1,0 +1,32 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Chrome",
+      "request": "launch",
+      "type": "chrome",
+      "url": "http://localhost:5173",
+      "webRoot": "${workspaceFolder}/aaa",
+      "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+      "userDataDir": "/Users/zhaoce/Desktop/学习汇总/ChromeDebugger",
+      "sourceMapPathOverrides": {
+        "meteor://💻app/*": "${workspaceFolder}/*",
+        "webpack:///./~/*": "${workspaceFolder}/node_modules/*",
+        "webpack://?:*/*": "${workspaceFolder}/*"
+      }
+    }
+    // {
+    //   "type": "chrome",
+    //   "request": "launch",
+    //   "name": "调试 vite 项目",
+    //   "runtimeExecutable": "canary",
+    //   "runtimeArgs": ["--auto-open-devtools-for-tabs"],
+    //   "userDataDir": false,
+    //   "url": "http://localhost:5173",
+    //   "webRoot": "${workspaceFolder}/aaa"
+    // }
+  ]
+}
